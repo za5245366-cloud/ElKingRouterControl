@@ -1,53 +1,50 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101010">
-  <title>ElKing Router Control</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0d10"><title>ElKing | Router Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand"><div class="logo">EK</div><div><strong>ElKing</strong><small>Router Control</small></div></div>
-    <span class="status"><i></i> لوحة التحكم</span>
-  </header>
-  <main class="container">
-    <section class="hero">
-      <p class="eyebrow">SMART NETWORK MANAGEMENT</p>
-      <h1>تحكّم في شبكتك<br><span>بسهولة وأمان</span></h1>
-      <p>واجهة إدارة محلية لراوتر WE ZTE ZXHN H188A.</p>
-      <a class="gold-button" href="http://192.168.0.1" target="_blank" rel="noopener">فتح صفحة الراوتر ↗</a>
-    </section>
-
-    <section class="grid">
-      <article class="card">
-        <div class="card-icon">⌁</div><h2>حالة الاتصال</h2>
-        <p class="muted">لوحة توضيحية — حدّث الحالة من صفحة الراوتر.</p>
-        <div class="big-value">محلي</div><span class="tag">الشبكة الداخلية</span>
-      </article>
-      <article class="card">
-        <div class="card-icon">◉</div><h2>عنوان الراوتر</h2>
-        <p class="muted">العنوان الافتراضي للمشروع</p>
-        <div class="big-value" dir="ltr">192.168.0.1</div>
-        <button class="outline-button" id="copyIp">نسخ العنوان</button>
-      </article>
-      <article class="card">
-        <div class="card-icon">⌘</div><h2>إعدادات Wi‑Fi</h2>
-        <p class="muted">افتح لوحة الراوتر لتغيير الاسم أو كلمة المرور بعد تسجيل دخولك.</p>
-        <a class="text-link" href="http://192.168.0.1" target="_blank" rel="noopener">إدارة إعدادات Wi‑Fi ←</a>
-      </article>
-    </section>
-
-    <section class="card guide">
-      <h2>معلومات المشروع</h2>
-      <div class="info-row"><span>اسم المشروع</span><b>ElKingRouterControl</b></div>
-      <div class="info-row"><span>نوع الراوتر المستهدف</span><b>ZTE ZXHN H188A</b></div>
-      <div class="info-row"><span>طريقة الاتصال</span><b>نفس شبكة الراوتر</b></div>
-      <p class="notice">هذه نسخة واجهة ويب تجريبية. الأزرار لا تغيّر إعدادات الراوتر مباشرة؛ التغيير الفعلي يتم من صفحة الإدارة الرسمية بعد تسجيل الدخول المصرّح به.</p>
-    </section>
-    <footer>© 2026 ElKing Router Control · واجهة محلية</footer>
-  </main>
-  <script src="app.js"></script>
-</body>
-</html>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="#"><span class="brand-mark">EK</span><span><b>ELKING</b><small>ROUTER CONTROL</small></span></a>
+  <div class="side-label">القائمة الرئيسية</div>
+  <a class="nav active" href="#overview"><span>▦</span> نظرة عامة</a>
+  <a class="nav" href="#network"><span>⌁</span> الشبكة والواي فاي</a>
+  <a class="nav" href="#devices"><span>▣</span> الأجهزة المتصلة</a>
+  <a class="nav" href="#security"><span>◇</span> الأمان والحماية</a>
+  <div class="side-label">النظام</div>
+  <a class="nav" href="#router"><span>⚙</span> معلومات الراوتر</a>
+  <div class="side-bottom"><div class="mini-router">⌁</div><b>WE ZTE H188A</b><small>لوحة إدارة محلية</small><span class="local-pill">● اتصال محلي</span></div>
+</aside>
+<main class="main">
+<header class="topbar"><button class="menu" id="menuBtn" aria-label="القائمة">☰</button><div><div class="crumb">لوحة التحكم <span>/</span> نظرة عامة</div><h1>مرحباً بك في ElKing</h1></div><div class="top-actions"><span class="secure">⌑ اتصال آمن محلياً</span><div class="avatar">EK</div></div></header>
+<section class="welcome" id="overview">
+ <div><div class="overline">SMART NETWORK MANAGEMENT</div><h2>شبكتك، تحت <em>سيطرتك.</em></h2><p>تابع حالة الراوتر وإعدادات الشبكة من لوحة واحدة.</p><a class="primary" href="http://192.168.1.1" target="_blank" rel="noopener">فتح لوحة الراوتر <span>↗</span></a></div>
+ <div class="hero-art"><div class="orbit orbit1"></div><div class="orbit orbit2"></div><div class="router-graphic"><div class="router-lights"><i></i><i></i><i></i><i></i></div><div class="router-waves">⌁</div><div class="router-name">ELKING</div></div><div class="signal s1">● متصل محلياً</div><div class="signal s2">192.168.1.1</div></div>
+</section>
+<div class="section-head"><div><h3>ملخص الشبكة</h3><p>معلومات تعريفية عن اتصالك المحلي</p></div><span class="updated">واجهة تجريبية</span></div>
+<section class="stats">
+ <article class="stat"><div class="stat-top"><span>عنوان الراوتر</span><b>⌁</b></div><strong dir="ltr">192.168.1.1</strong><small>بوابة الشبكة المحلية</small></article>
+ <article class="stat"><div class="stat-top"><span>موديل الجهاز</span><b>▣</b></div><strong>ZTE H188A</strong><small>WE Home Router</small></article>
+ <article class="stat"><div class="stat-top"><span>نوع الاتصال</span><b>◉</b></div><strong>Wi-Fi / LAN</strong><small>اتصل بنفس شبكة الراوتر</small></article>
+ <article class="stat"><div class="stat-top"><span>حالة لوحة التحكم</span><b>◇</b></div><strong class="gold-text">جاهزة للربط</strong><small>بانتظار واجهة الإدارة الرسمية</small></article>
+</section>
+<section class="lower-grid">
+ <article class="panel" id="network"><div class="panel-title"><div><h3>إدارة الشبكة</h3><p>اختصارات الوصول لإعدادات الراوتر</p></div><span class="panel-icon">⌁</span></div>
+  <a class="action-row" href="http://192.168.1.1" target="_blank" rel="noopener"><span class="action-icon">◉</span><span><b>إعدادات Wi-Fi</b><small>اسم الشبكة وكلمة المرور من لوحة الراوتر</small></span><i>←</i></a>
+  <a class="action-row" href="http://192.168.1.1" target="_blank" rel="noopener"><span class="action-icon">▣</span><span><b>الأجهزة المتصلة</b><small>افتح قائمة الأجهزة من واجهة الإدارة</small></span><i>←</i></a>
+  <a class="action-row" href="http://192.168.1.1" target="_blank" rel="noopener"><span class="action-icon">◇</span><span><b>الحماية وكلمة المرور</b><small>إدارة إعدادات الأمان المصرّح بها</small></span><i>←</i></a>
+ </article>
+ <article class="panel" id="router"><div class="panel-title"><div><h3>بيانات الجهاز</h3><p>تعريف الراوتر المستهدف</p></div><span class="panel-icon">⚙</span></div>
+  <div class="detail"><span>الشركة المصنعة</span><b>ZTE</b></div><div class="detail"><span>الموديل</span><b>ZXHN H188A</b></div><div class="detail"><span>عنوان الإدارة</span><b dir="ltr">192.168.1.1</b></div><div class="detail"><span>طريقة الربط</span><b>الشبكة المحلية</b></div>
+  <div class="note">للوصول للبيانات الفعلية والتحكم بها، سجّل الدخول إلى صفحة الراوتر الرسمية أولاً. هذه اللوحة لا تتجاوز تسجيل الدخول ولا تحفظ بياناتك.</div>
+ </article>
+</section>
+<footer><span>© 2026 ELKING ROUTER CONTROL</span><span>صُممت لإدارة الشبكة بسهولة وأمان</span></footer>
+</main></div>
+<script src="app.js"></script>
+</body></html>
