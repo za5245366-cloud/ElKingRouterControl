@@ -2,43 +2,32 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b0d10">
-<title>ElKing | Embedded Router Panel</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
+<meta name="theme-color" content="#090b10">
+<title>ElKing Router Control PRO</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#090b10;color:#f5f1e8;font-family:Tahoma,Arial,sans-serif}
+header{padding:28px 20px 20px;background:linear-gradient(145deg,#17191f,#090b10);border-bottom:1px solid #554323}
+.brand{color:#e3b85d;font-size:27px;font-weight:bold}.sub{color:#b8b2a5;margin-top:7px;font-size:13px}
+.wrap{padding:18px;max-width:650px;margin:auto}.status{padding:16px;border:1px solid #4b3a1e;background:#15140f;border-radius:16px;margin-bottom:18px}
+.status strong{color:#e4ba62}.muted{color:#aaa394;font-size:13px;line-height:1.8}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:#151820;border:1px solid #34302a;border-radius:16px;padding:18px 14px;min-height:112px}
+.tile .ico{font-size:25px}.tile b{display:block;margin:10px 0 5px;color:#e8c575}.tile small{color:#aaa394;line-height:1.6}
+button{width:100%;border:0;border-radius:13px;padding:15px;background:linear-gradient(90deg,#b88735,#e5c16f);color:#17120a;font-size:16px;font-weight:bold;margin-top:16px}
+.note{margin-top:18px;padding:14px;border-radius:14px;background:#11151c;color:#bdb7aa;font-size:12px;line-height:1.9}
+footer{text-align:center;color:#8f887b;font-size:12px;padding:22px}
+</style></head>
 <body>
-<div class="layout">
-<aside class="sidebar" id="sidebar">
-  <a class="brand" href="index.html"><span class="mark">EK</span><span><b>ELKING</b><small>ROUTER CONTROL</small></span></a>
-  <p class="nav-caption">لوحة التحكم</p>
-  <a class="nav" href="index.html">▦　 نظرة عامة</a>
-  <a class="nav selected" href="#router-panel">⌁　 لوحة الراوتر الداخلية</a>
-  <a class="nav" href="#connection-help">◇　 حالة الاتصال</a>
-  <div class="side-info"><span class="router-symbol">⌁</span><b>ZTE ZXHN H188A</b><small>بوابة الشبكة المحلية</small><code>192.168.1.1</code></div>
-</aside>
-<main class="main">
-<header class="header"><button id="menu" class="menu">☰</button><div><small>ELKING / ROUTER PANEL</small><h1>لوحة الراوتر الداخلية</h1></div><span class="local">● إعداد محلي</span></header>
-<section class="intro">
- <div><span class="eyebrow">EMBEDDED ROUTER ACCESS</span><h2>إدارة الراوتر من <em>داخل موقعك</em></h2><p>نحاول عرض صفحة الإدارة داخل هذه اللوحة دون الانتقال إلى متصفح آخر.</p></div>
- <div class="ip-card"><small>ROUTER GATEWAY</small><b dir="ltr">192.168.1.1</b><span>العنوان الذي أكدته</span></div>
-</section>
-<section class="panel" id="router-panel">
- <div class="panel-head"><div><h3>صفحة إدارة ZTE</h3><p>إذا سمح الراوتر بالتضمين ستظهر صفحة الدخول هنا.</p></div><span class="attempt">محاولة عرض داخلية</span></div>
- <div class="frame-wrap">
-  <iframe id="routerFrame" title="صفحة إدارة الراوتر" src="http://192.168.1.1/" referrerpolicy="no-referrer" loading="eager" allow="clipboard-read; clipboard-write"></iframe>
-  <div class="frame-overlay" id="frameFallback">
-   <div class="fallback-icon">⌁</div><h3>تعذّر تأكيد عرض صفحة الراوتر داخل الموقع</h3>
-   <p>قد يمنع الراوتر التضمين بسياسات حماية مثل X-Frame-Options أو Content-Security-Policy. المتصفح لا يسمح للموقع بقراءة محتوى الإطار لمعرفة سبب المنع بدقة.</p>
-   <div class="fallback-actions"><button id="retry" class="primary">إعادة المحاولة</button><button id="sameTab" class="secondary">فتح صفحة الراوتر في نفس النافذة</button></div>
-   <small>تأكد أنك متصل بشبكة الراوتر نفسها وأن العنوان المحلي هو 192.168.1.1.</small>
-  </div>
- </div>
- <div class="frame-foot"><span>العنوان: <b dir="ltr">http://192.168.1.1</b></span><span>لا يتم إرسال كلمة المرور إلى هذا الموقع.</span></div>
-</section>
-<section class="security" id="connection-help"><div class="security-icon">◇</div><div><b>ملاحظة أمان مهمة</b><p>لا نستخدم وسيطاً يعيد تمرير صفحة تسجيل دخول الراوتر أو يخزن بيانات المسؤول. هذا النوع من الوكلاء قد يكشف جلسة الإدارة وكلمة المرور. إذا منع الراوتر iframe، فالبديل الآمن هو فتح واجهته مباشرة داخل WebView لتطبيق Android، أو استخدام API رسمية موثقة من الشركة عبر خدمة محلية محمية.</p></div></section>
-<footer>© 2026 ELKING ROUTER CONTROL <span>واجهة إدارة محلية</span></footer>
-</main>
+<header><div class="brand">♛ ElKing Router Control PRO</div><div class="sub">لوحة إدارة راوتر WE ZTE ZXHN H188A</div></header>
+<main class="wrap">
+<div class="status"><strong>بيانات الراوتر</strong><div class="muted">العنوان: 192.168.1.1<br>الموديل: ZXHN H188A V6<br>البرنامج المثبت: V6.0.10P3N3_TE</div></div>
+<div class="grid">
+<div class="tile"><div class="ico">📶</div><b>إعدادات Wi‑Fi</b><small>افتح صفحة الإدارة الرسمية لتعديل اسم الشبكة وكلمة المرور.</small></div>
+<div class="tile"><div class="ico">📱</div><b>الأجهزة المتصلة</b><small>عرض الأجهزة من صفحة الراوتر الرسمية بعد تسجيل الدخول.</small></div>
+<div class="tile"><div class="ico">🛡️</div><b>الأمان</b><small>إعدادات الحماية المتاحة في واجهة ZTE الرسمية.</small></div>
+<div class="tile"><div class="ico">🔄</div><b>إعادة التشغيل</b><small>استخدم أمر إعادة التشغيل الرسمي من لوحة الراوتر.</small></div>
 </div>
-<script src="app.js"></script>
+<button onclick="AndroidApp.openRouter()">فتح لوحة الراوتر داخل التطبيق</button>
+<div class="note">ملاحظة: التطبيق يفتح صفحة الإدارة الرسمية داخل نافذة التطبيق ولا يحفظ كلمة المرور. قراءة الأجهزة وتغيير الإعدادات مباشرة من لوحة ElKing تحتاج أولاً إلى مطابقة واجهات API الخاصة بهذا الإصدار من ZTE؛ لذلك لا نعرض بيانات تجريبية على أنها حقيقية.</div>
+</main><footer>ElKing • إصدار أولي 1.0</footer>
 </body></html>
